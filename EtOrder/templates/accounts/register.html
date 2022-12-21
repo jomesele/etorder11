@@ -1,0 +1,14 @@
+{% extends 'accounts/accountsbase.html' %}
+{% block body_block %}
+
+<div class="jumbotron">
+    <h1 class="display-3">Register Here!</h1>
+   
+    <hr class="my-2">
+    <p class="lead">
+        <a class="btn btn-primary btn-lg" href="{% url "accounts:registerCustomer" %}" role="button">I'm a Customer</a>
+        <a class="btn btn-primary btn-lg" href="{% url "accounts:registerStaff" %}" role="button">I'm a Staff Member</a>
+    </p>
+</div>
+
+{% endblock %}

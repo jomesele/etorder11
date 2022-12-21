@@ -1,0 +1,19 @@
+{% extends 'accounts/accountsbase.html' %}
+{% block body_block %}
+
+<div class="jumbotron">
+   {% if registered %}
+        <h1>Thanks for registering, Please Log in!</h1>
+    {% else %}
+        <h1>Registration for Staff Members:</h1>
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{ var_staffForm.as_p }}
+            {{ var_staffAddForm.as_p }}
+            <input type="submit" value="Register" class="btn btn-primary">
+        </form>
+    {% endif %}
+</div>
+
+
+{% endblock %}
